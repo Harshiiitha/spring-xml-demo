@@ -21,6 +21,7 @@ public class Main {
             Movie movie= (Movie)context.getBean("movie1");
             System.out.println(movie);
 
+
             //Checking singleton scope
             Movie movie3= (Movie)context.getBean("movie1");
             System.out.print("Singleton scope : ");
