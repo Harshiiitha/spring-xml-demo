@@ -46,7 +46,7 @@ public class Main {
 
 
 
-            //checking prototype scope
+            //checking the prototype scope
             Movie movie6=(Movie)beanFactory.getBean("movie2");
             System.out.print("Prototype scope :");
             System.out.println(movie1==movie6);
