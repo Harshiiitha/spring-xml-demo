@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="movie1"  class="com.stackroute.Movie" >
+        <property name="m_name" value="Maharshi"  />
+        <property name="actor" ref="actor1"/>
+    </bean>
+    <bean id="actor1" class="com.stackroute.Actor">
+        <property  name="a_name" value="Mahesh"/>
+        <property  name="a_gender" value="Male"/>
+        <property  name="a_age" value="40"/>
+
+    </bean>
+
+    <bean id="movie2"  class="com.stackroute.Movie" >
+        <property name="m_name" value="Bahubali"  />
+        <property name="actor" ref="actor2"/>
+    </bean>
+    <bean id="actor2" class="com.stackroute.Actor">
+        <property  name="a_name" value="Prabhas"/>
+        <property  name="a_gender" value="Male"/>
+        <property  name="a_age" value="38"/>
+
+    </bean>
+
+    <bean id="movie3"  class="com.stackroute.Movie" >
+        <property name="m_name" value="Arundathi"  />
+        <property name="actor" ref="actor3"/>
+    </bean>
+    <bean id="actor3" class="com.stackroute.Actor">
+        <property  name="a_name" value="Anushka"/>
+        <property  name="a_gender" value="Female"/>
+        <property  name="a_age" value="40"/>
+
+    </bean>
+</beans>
+
