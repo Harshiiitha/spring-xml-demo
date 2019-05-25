@@ -1,7 +1,6 @@
-Spring Core Task1
-Creating Beans using:
-1.Application context
-2.BeanFcatory
-3.BeanDefinitionRegistry and BeanDefinitionReader
-Dependency Injection:
-Using property element
+Spring Core Task4
+
+-->Implementing ApplicationContextAware interface
+-->Implementing BeanFactoryAware Interface
+-->Implementing BeanNameAware Interface
+-->Implementing ResourceLoaderAware Interface
