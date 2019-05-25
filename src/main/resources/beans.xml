@@ -36,5 +36,18 @@
         <constructor-arg  name="a_age" value="40" type="int"/>
 
     </bean>
+
+    <bean id="applicationcontextawaredemo" class="com.stackroute.ApplicationContextAwareDemo">
+
+    </bean>
+    <bean id="beanfactorytawaredemo" class="com.stackroute.BeanFactoryAwareDemo">
+
+    </bean>
+    <bean id="beannameawaredemo" class="com.stackroute.BeanNameAwareDemo">
+
+    </bean>
+    <bean id="resourceloaderawaredemo" class="com.stackroute.ResourceLoaderAwareDemo">
+
+    </bean>
 </beans>
 

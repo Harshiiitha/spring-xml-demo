@@ -1,4 +1,6 @@
-Spring Core Task3
+Spring Core Task4
 
-->Implented Autowiring byName
-->Checked Autowiring byType
+-->Implementing ApplicationContextAware interface
+-->Implementing BeanFactoryAware Interface
+-->Implementing BeanNameAware Interface
+-->Implementing ResourceLoaderAware Interface
