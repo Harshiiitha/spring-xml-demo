@@ -18,6 +18,7 @@ public class Main {
 
             //Using Application context
             ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+            //Autowiring byname
             Movie movie= (Movie)context.getBean("movie1");
             System.out.println(movie);
 
