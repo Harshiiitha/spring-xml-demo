@@ -1,6 +1,6 @@
-Spring Core Task4
+Spring Core Task5
 
--->Implementing ApplicationContextAware interface
--->Implementing BeanFactoryAware Interface
--->Implementing BeanNameAware Interface
--->Implementing ResourceLoaderAware Interface
+-->Adding BeanLifeCycleDemo class
+-->Implements InitializingBean and Disposablebean
+-->Overriding customInit and customDestroy methods
+-->calling it from beans.xml

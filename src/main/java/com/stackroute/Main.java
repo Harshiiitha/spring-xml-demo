@@ -7,6 +7,7 @@ import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
@@ -17,7 +18,7 @@ public class Main {
         {
 
             //Using Application context
-            ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+            ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
             //Autowiring byname
             Movie movie= (Movie)context.getBean("movie1");
             System.out.println(movie);
@@ -39,12 +40,13 @@ public class Main {
             System.out.println("Using name attribute");
             System.out.println(movie5);
 
+            context.close();
 
-            //Using XmlBeanFactory
+
+           ///Using XmlBeanFactory
             BeanFactory beanFactory=new XmlBeanFactory(new ClassPathResource("beans.xml"));
             Movie movie1=(Movie)beanFactory.getBean("movie2");
             System.out.println(movie1);
-
 
 
             //checking prototype scope
@@ -60,8 +62,6 @@ public class Main {
             beanDefinitionReader.loadBeanDefinitions(new ClassPathResource("beans.xml"));
             Movie movie2=(Movie) ((DefaultListableBeanFactory) beanDefinitionRegistry).getBean("movie3");
             System.out.println(movie2);
-
-
 
 
         }
