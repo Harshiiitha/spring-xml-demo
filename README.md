@@ -1,6 +1,6 @@
-Spring Core Task5
+Spring Core Task6
 
--->Adding BeanLifeCycleDemo class
--->Implements InitializingBean and Disposablebean
--->Overriding customInit and customDestroy methods
--->calling it from beans.xml
+-->Creating a BeanPostProcessorDemoBeanClass that implements BeanPostProcessor
+-->Overriding methods:
+1.postProcessBeforeInitialization
+2.postProcessAfterInitializationa

@@ -54,5 +54,9 @@
 
     </bean>
 
+    <bean id="beanpostprocessordemo" class="com.stackroute.BeanPostProcessorDemoBean">
+
+    </bean>
+
 </beans>
 
