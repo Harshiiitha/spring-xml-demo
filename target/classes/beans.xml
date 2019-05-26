@@ -5,42 +5,39 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="movie1"  class="com.stackroute.Movie" >
+    <bean id="movie1"  class="com.stackroute.Movie" name="MovieA,MovieB" autowire="byName">
         <property name="m_name" value="Maharshi"  />
-        <property name="actor" ref="actor1"/>
     </bean>
-    <bean id="actor1" class="com.stackroute.Actor">
-        <property  name="a_name" value="Mahesh"/>
+    <bean id="actor" class="com.stackroute.Actor">
+        <property name="a_name" value="Mahesh"/>
         <property  name="a_gender" value="Male"/>
-        <property  name="a_age" value="40"/>
+        <property name="a_age" value="40"/>
 
     </bean>
 
-    <bean id="movie2"  class="com.stackroute.Movie" >
-        <property name="m_name" value="Bahubali"  />
-        <property name="actor" ref="actor2"/>
+    <bean id="movie2"  class="com.stackroute.Movie" scope="prototype" >
+        <constructor-arg index="0" value="Bahubali"  />
+        <constructor-arg index="1" ref="actor2"/>
     </bean>
     <bean id="actor2" class="com.stackroute.Actor">
-        <property  name="a_name" value="Prabhas"/>
-        <property  name="a_gender" value="Male"/>
-        <property  name="a_age" value="38"/>
+        <constructor-arg index="0" value="Prabhas"/>
+        <constructor-arg  index="1" value="Male"/>
+        <constructor-arg  index="2" value="38"/>
 
     </bean>
 
     <bean id="movie3"  class="com.stackroute.Movie" >
-        <property name="m_name" value="Arundathi"  />
-        <property name="actor" ref="actor3"/>
+        <constructor-arg name="m_name" value="Arundathi" type="java.lang.String"  />
+        <constructor-arg name="actor" ref="actor3" />
     </bean>
     <bean id="actor3" class="com.stackroute.Actor">
-        <property  name="a_name" value="Anushka"/>
-        <property  name="a_gender" value="Female"/>
-        <property  name="a_age" value="40"/>
+        <constructor-arg  name="a_name" value="Anushka" type="java.lang.String"/>
+        <constructor-arg name="a_gender" value="Female" type="java.lang.String"/>
+        <constructor-arg  name="a_age" value="40" type="int"/>
 
     </bean>
 
-
-
-    <!--<bean id="applicationcontextawaredemo" class="com.stackroute.ApplicationContextAwareDemo">
+    <bean id="applicationcontextawaredemo" class="com.stackroute.ApplicationContextAwareDemo">
 
     </bean>
     <bean id="beanfactorytawaredemo" class="com.stackroute.BeanFactoryAwareDemo">
@@ -49,25 +46,17 @@
     <bean id="beannameawaredemo" class="com.stackroute.BeanNameAwareDemo">
 
     </bean>
-      <bean id="movie2" class="com.stackroute.Movie"  scope="prototype" >
-          <constructor-arg name="actor" ref="actor2" index="1"></constructor-arg>
-          <constructor-arg name="m_name" value="dhoom3" index="0" />
+    <bean id="resourceloaderawaredemo" class="com.stackroute.ResourceLoaderAwareDemo">
 
-      </bean>
-      <bean id="actor2" class="com.stackroute.Actor">
-          <constructor-arg name="name" value="Hrithik" index="0" type="java.lang.String"/>
-          <constructor-arg name="age" value="45" index="1" type="int"/>
-          <constructor-arg name="aid" value="2" index="2" type="int"/>
+    </bean>
 
-      </bean>
-      <bean id="movie3" class="com.stackroute.Movie">
-          <constructor-arg name="actor" ref="actor3" index="1"></constructor-arg>
-          <constructor-arg name="m_name" value="vanakam" index="0" />
-      </bean>
-      <bean id="actor3" class="com.stackroute.Actor">
-          <constructor-arg name="name" value="Mamuti" index="0" type="java.lang.String"/>
-          <constructor-arg name="aid" value="3" index="2" type="int"/>
-          <constructor-arg name="age" value="65" index="1" type="int"/>
-      </bean>-->
+    <bean id="beanlifecycledemo" class="com.stackroute.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
+
+    </bean>
+
+    <bean id="beanpostprocessordemo" class="com.stackroute.BeanPostProcessorDemoBean">
+
+    </bean>
+
 </beans>
 
